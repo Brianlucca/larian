@@ -43,6 +43,12 @@ main {
   transform: translateY(-1em);
   color: white;
 }
+.RBD p {
+  margin-right: 7.3em;
+}
+.staiway p {
+  margin-right: 3.8em;
+}
 audio {
   position: fixed;
   top: 37em;
@@ -63,9 +69,6 @@ audio {
   border-radius: 0.5em;
   display: none;
   color: rgb(255, 255, 255);
-}
-.RBD p {
-  margin-right: 7.3em;
 }
 
 .Formulario {
@@ -151,6 +154,10 @@ button {
   .RBD p {
     margin-right: 7.8em;
   }
+  .staiway p {
+    margin-right: 5.3em;
+  }
+  
   .Formulario {
     margin-left: 3.3em;
     margin-top: -1.9em;
