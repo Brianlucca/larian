@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./Assents/Css/reset.css" />
+    <link rel="stylesheet" href="./Assents/Css/Subpaginas/cabecalho-musica.css" />
+    <link rel="stylesheet" href="./Assents/Css/Subpaginas/main-musica.css" />
+    <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-storage.js"></script>
+    <title>Musicas</title>
+    <link
+      rel="icon"
+      href="caminho-para-o-seu-favicon.ico"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul class="cabecalho-musica">
+          <img alt="Agenda" src="./Assents/Image/agenda.png" />
+          <li><a href="">Anotações</a></li>
+          <li><a href="">Lista</a></li>
+          <li><a href="">Eu & Você</a></li>
+          <li><a href="index.html">Inicio</a></li>
+        </ul>
+        <div class="progress-container">
+        <div class="progress-bar animate"></div>
+      </nav>
+    </header>
+    <main>
+      <section class="introducao">
+        <h1>Aqui podemos listar nossas músicas</h1>
+        <h3>Escolha qualquer música.</h3>
+      </section>
+      <div id="musicList"></div>  
+      <form class="Formulario" id="meuFormulario">
+        <form id="meuFormulario">
+          <input type="file" id="arquivo" accept="image/*" />
+          <input type="text" id="nome" placeholder="Nome da música" />
+          <input type="url" id="url" placeholder="URL da música" />
+          <button type="button" onclick="enviarParaFirebase()">Enviar</button>
+      </form>
+      <section class="musicas">
+        <h1>Nossas Musicas</h1>
+        <div id="mensagemMusica" class="mensagemMusica"></div>
+        <div class="linha">
+          <ul>
+            <li class="timeToDie">
+              <img
+                src="./Assents/Image/Billie_Eilish_-_No_Time_to_Die.png"
+                id="imagemMusica"
+              />
+              <p>Billie Eilish - No Time To Die</p>
+              <audio controls id="audioMusica">
+                <source
+                  src="./Assents/Billie Eilish - No Time To Die (Official Music Video) (720p).webm"
+                  type="audio/mpeg"
+                />
+                Seu navegador não suporta o elemento de áudio.
+              </audio>
+            </li>
+            <li class="djavan">
+              <img src="./Assents/Image/djvan.jpg" id="imagemMusica" />
+              <p>Djavan - Nem um Dia</p>
+              <audio controls id="audioMusica">
+                <source
+                  src="./Assents/Djavan - Nem um Dia (Áudio Oficial)_rSCMHj0ZfuY.mp3"
+                  type="audio/mpeg"
+                />
+                Seu navegador não suporta o elemento de áudio.
+              </audio>
+            </li>
+            <li class="stranger">
+              <img
+                src="./Assents/Image/Kenya_Grace_-_Strangers.png"
+                id="imagemMusica"
+              />
+              <p>Kenya Grace - Stranger</p>
+              <audio controls id="audioMusica">
+                <source
+                  src="./Assents/Kenya Grace - Strangers (Official Lyric Video)_S2TaAcwC_zI.mp3"
+                  type="audio/mpeg"
+                />
+                Seu navegador não suporta o elemento de áudio.
+              </audio>
+            </li>
+            <li class="kinkwoman">
+              <img
+                src="./Assents/Image/my kind of woman.webp"
+                id="imagemMusica"
+              />
+              <p>Mac D. - My Kind Of Woman</p>
+              <audio controls id="audioMusica">
+                <source
+                  src="./Assents/Mac DeMarco __ _My Kind of Woman_ (OFFICIAL VIDEO)_wIuBcb2T55Q.mp3"
+                  type="audio/mpeg"
+                />
+                Seu navegador não suporta o elemento de áudio.
+              </audio>
+            </li>
+          </ul>
+        </div>
+        <div class="linha">
+          <ul>
+            <li class="firsTime">
+              <img src="./Assents/Image/mac demarco gif.gif" id="imagemMusica" />
+              <p>Mac D. - For The First Time</p>
+              <audio controls id="audioMusica">
+                <source
+                  src="./Assents/For the First Time_cZCm_i6YvAk (1).mp3"
+                  type="audio/mpeg"
+                />
+                Seu navegador não suporta o elemento de áudio.
+              </audio>
+            </li>
+            <li class="terno">
+              <img src="./Assents/Image/atras alem.webp" id="imagemMusica" />
+              <p>O Terno - Atrás / Além</p>
+              <audio controls id="audioMusica">
+                <source
+                  src="./Assents/Atrás _ Além_8KrokLPJIFs.mp3"
+                  type="audio/mpeg"
+                />
+                Seu navegador não suporta o elemento de áudio.
+              </audio>
+            </li>
+            <li>
+              <img
+                src="./Assents/Image/Je te laisserai des mots.jpg"
+                id="imagemMusica"
+              />
+              <p>Je te laisserai des mots</p>
+              <audio controls id="audioMusica">
+                <source
+                  src="./Assents/Je te laisserai des mots_mcdO9UP0hp8.mp3"
+                  type="audio/mpeg"
+                />
+                Seu navegador não suporta o elemento de áudio.
+              </audio>
+            </li>
+            <li class="magic">
+              <img src="./Assents/Image/Magic In Paris.webp" id="imagemMusica" />
+              <p>Magic Man - Paris</p>
+              <audio controls id="audioMusica">
+                <source
+                  src="./Assents/Magic Man - Paris (Audio)_-5s1q7SVs6U.mp3"
+                  type="audio/mpeg"
+                />
+                Seu navegador não suporta o elemento de áudio.
+              </audio>
+            </li>
+          </ul>
+        </div>
+        <div class="linha">
+          <ul>
+            <li>
+              <img src="./Assents/Image/Nao espero mais.jpg" id="imagemMusica" />
+              <p>O terno - Não Espero Mais</p>
+              <audio controls id="audioMusica">
+                <source
+                  src="./Assents/O Terno - Não Espero Mais_DhHnNcWqtqE.mp3"
+                  type="audio/mpeg"
+                />
+                Seu navegador não suporta o elemento de áudio.
+              </audio>
+            </li>
+            <li>
+              <img
+                src="./Assents/Image/dois de fevereiro.jpg"
+                id="imagemMusica"
+              />
+              <p>Selvagens à. - 2 de fevereiro</p>
+              <audio controls id="audioMusica">
+                <source
+                  src="./Assents/Selvagens à Procura de Lei - Dois de Fevereiro (Áudio Oficial)_WHrzac6S4zg.mp3"
+                  type="audio/mpeg"
+                />
+                Seu navegador não suporta o elemento de áudio.
+              </audio>
+            </li>
+            <li>
+              <img
+                src="./Assents/Image/messages from the star.jpeg"
+                id="imagemMusica"
+              />
+              <p>Messages From The Stars</p>
+              <audio controls id="audioMusica">
+                <source
+                  src="./Assents/The RAH Band - Messages From The Stars (Short Wave)_gbUbrKpeM9M.mp3"
+                  type="audio/mpeg"
+                />
+                Seu navegador não suporta o elemento de áudio.
+              </audio>
+            </li>
+            <li class="jojiYeah">
+              <img src="./Assents/Image/yeah right.png" id="imagemMusica" />
+              <p>Joji - Yeah Right</p>
+              <audio controls id="audioMusica">
+                <source
+                  src="./Assents/Joji - YEAH RIGHT_tG7wLK4aAOE.mp3"
+                  type="audio/mpeg"
+                />
+                Seu navegador não suporta o elemento de áudio.
+              </audio>
+            </li>
+          </ul>
+        </div>
+        <div class="linha">
+          <ul>
+            <li class="loseControl">
+              <img src="./Assents/Image/lose control.jpg" id="imagemMusica" />
+              <p>Teddy Swims - Lose Control</p>
+              <audio controls id="audioMusica">
+                <source
+                  src="./Assents/Teddy Swims - Lose Control (Live)_GZ3zL7kT6_c.mp3"
+                  type="audio/mpeg"
+                />
+                Seu navegador não suporta o elemento de áudio.
+              </audio>
+            </li>
+            <li class="badHabit">
+              <img src="./Assents/Image/bad habit.jpg" id="imagemMusica" />
+              <p>Steve Lacy - Bad Habit</p>
+              <audio controls id="audioMusica">
+                <source
+                  src="./Assents/Bad Habit_1E2ihUl6ed4.mp3"
+                  type="audio/mpeg"
+                />
+                Seu navegador não suporta o elemento de áudio.
+              </audio>
+            </li>
+            <li class="badHabit">
+              <img src="./Assents/Image/bad habit.jpg" id="imagemMusica" />
+              <p>Steve Lacy - Mercury</p>
+              <audio controls id="audioMusica">
+                <source
+                  src="./Assents/Mercury_qcvkKvMixS8.mp3"
+                  type="audio/mpeg"
+                />
+                Seu navegador não suporta o elemento de áudio.
+              </audio>
+            </li>
+            <li>
+              <img src="./Assents/Image/another one.gif" id="imagemMusica" />
+              <p>Mac Demarco - Another one</p>
+              <audio controls id="audioMusica">
+                <source
+                  src="./Assents/Mac DeMarco __ Another One (Official Video)_gbg27oT8Z9M.mp3"
+                  type="audio/mpeg"
+                />
+                Seu navegador não suporta o elemento de áudio.
+              </audio>
+            </li>
+          </ul>
+        </div>
+        <div class="linha">
+          <ul>
+            <li class="RBD">
+              <img src="./Assents/Image/me voy.jpeg" id="imagemMusica" />
+              <p>RBD - Me Voy</p>
+              <audio controls id="audioMusica">
+                <source
+                  src="./Assents/RBD - Me Voy (Audio)_vWBV5mZfmTQ.mp3"
+                  type="audio/mpeg"
+                />
+                Seu navegador não suporta o elemento de áudio.
+              </audio>
+            </li>
+            <li>
+              <img src="./Assents/Image/corona.jpg" id="imagemMusica" />
+              <p>The Rhythm Of The Night</p>
+              <audio controls id="audioMusica">
+                <source
+                  src="./Assents/The Rhythm of the Night_6VCsABl390Y.mp3"
+                  type="audio/mpeg"
+                />
+                Seu navegador não suporta o elemento de áudio.
+              </audio>
+            </li>
+            <li class="principeEncatado">
+              <img
+                src="./Assents/Image/principe encantado.jpg"
+                id="imagemMusica"
+              />
+              <p>Principe Encantado</p>
+              <audio controls id="audioMusica">
+                <source
+                  src="./Assents/Calypso - Príncipe Encantado - @BandaCalypso_ysS179KYL7M.mp3"
+                  type="audio/mpeg"
+                />
+                Seu navegador não suporta o elemento de áudio.
+              </audio>
+            </li>
+            <li class="">
+              <img src="./Assents/Image/amour.jpeg" id="imagemMusica" />
+              <p>Amour Plastique</p>
+              <audio controls id="audioMusica">
+                <source
+                  src="./Assents/VIDEOCLUB - Amour plastique (clip officiel)_5NjJLFI_oYs.mp3"
+                  type="audio/mpeg"
+                />
+                Seu navegador não suporta o elemento de áudio.
+              </audio>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+      <script src="./Assents/Js/musicas.js"></script>
+    <script src="./Assents/Js/banco.js"></script>
+  </body>
+</html>

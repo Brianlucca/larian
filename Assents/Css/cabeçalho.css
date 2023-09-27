@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@100&family=Inconsolata&family=Lora&family=Poppins&display=swap");
+
+header {
+  background: linear-gradient(to bottom, #ff6ec5cc, #6b6bff);
+  font-family: "Fira Sans", sans-serif;
+  font-family: "Inconsolata", monospace;
+  font-family: "Lora", serif;
+  font-family: "Poppins", sans-serif;
+}
+
+.opcoes-cabecalho img {
+  width: 3em;
+  margin: 0.5em;
+  margin-left: 4em;
+}
+.opcoes-cabecalho a {
+  text-decoration: none;
+  margin: 1em;
+  margin-right: 5em;
+  position: relative;
+}
+.opcoes-cabecalho a::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px; /* Espessura do overline */
+  bottom: 0;
+  left: 0;
+  background-color: rgb(114, 27, 88); /* Cor do overline */
+  transform: scaleX(0); /* Inicialmente, o overline estará escondido */
+  transition: transform 0.3s ease-in-out;
+}
+.opcoes-cabecalho a:hover::before {
+  color: rgb(114, 27, 88);
+  transform: scaleX(1);
+}
+.opcoes-cabecalho li {
+  list-style: none;
+  display: flex;
+  float: right;
+}
+
+@media (max-width: 767px) {
+  .opcoes-cabecalho img {
+    width: 2em;
+    margin-left: 0.3em;
+  }
+  .opcoes-cabecalho {
+    font-family: "Fira Sans", sans-serif;
+    font-family: "Inconsolata", monospace;
+    font-family: "Lora", serif;
+    font-family: "Poppins", sans-serif;
+  }
+  .opcoes-cabecalho a {
+    text-decoration: none;
+    margin-right: -0.1em;
+    margin: 0.3em;
+    margin-top: 1.2em;
+    font-size: 0.9em;
+    cursor: none;
+  }
+  .opcoes-cabecalho li {
+    list-style: none;
+    margin-left: 0.2em;
+  }
+  .opcoes-cabecalho a:active {
+    color: #6b6bff;
+  }
+  .opcoes-cabecalho a::before {
+    display: none;
+  }
+  .opcoes-cabecalho a:hover::before {
+    display: none;
+  }
+}

@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@100&family=Inconsolata&family=Lora&family=Poppins&display=swap");
+
+header {
+  background-color: black;
+  font-family: "Fira Sans", sans-serif;
+  font-family: "Inconsolata", monospace;
+  font-family: "Lora", serif;
+  font-family: "Poppins", sans-serif;
+}
+.cabecalho-musica img {
+  width: 3em;
+  margin: 0.5em;
+  margin-left: 4em;
+}
+.cabecalho-musica a {
+  text-decoration: none;
+  margin: 1em;
+  margin-right: 5em;
+  position: relative;
+  color: rgb(147, 241, 147);
+}
+.cabecalho-musica a::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px; /* Espessura do overline */
+  bottom: 0;
+  left: 0;
+  background-color: rgb(72, 255, 0); /* Cor do overline */
+  transform: scaleX(0); /* Inicialmente, o overline estará escondido */
+  transition: transform 0.3s ease-in-out;
+}
+
+.cabecalho-musica a:hover::before {
+  color: rgb(114, 27, 88);
+  transform: scaleX(1);
+}
+
+.cabecalho-musica li {
+  list-style: none;
+  display: flex;
+  float: right;
+}
+.progress-container {
+  height: 0.1em;
+  position: relative;
+}
+.progress-bar {
+  width: 100%;
+  height: 100%;
+  background-color: green;
+  position: absolute;
+  animation: run 7s linear forwards;
+  animation-delay: 1.1s;
+}
+@keyframes run {
+  0% {
+    right: 100%;
+  }
+  100% {
+    right: 0;
+  }
+}
+@media (max-width: 767px) {
+  .cabecalho-musica img {
+    width: 2em;
+    margin: 0.4em;
+    margin-left: none;
+  }
+
+  .cabecalho-musica a {
+    text-decoration: none;
+    margin: 1em;
+    margin-right: 0.1em;
+    cursor: none;
+  }
+
+  .cabecalho-musica a:active {
+    color: #6b6bff;
+  }
+
+  .cabecalho-musica a::before {
+    display: none;
+  }
+
+  .cabecalho-musica a:hover::before {
+    display: none;
+  }
+
+  .cabecalho-musica li {
+    list-style: none;
+    display: flex;
+    float: right;
+  }
+}
