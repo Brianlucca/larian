@@ -49,11 +49,18 @@ header {
     margin: 0.4em;
     margin-left: none;
   }
+  .progress-container {
+    height: 0.1em;
+    position: relative;
+    background-color: rgb(10, 163, 130);
+  }
+  
   .cabecalho-musica a {
     text-decoration: none;
     margin: 0.7em;
     margin-right: 0.1em;
     cursor: none;
+    color: rgb(166, 247, 202);
   }
   .cabecalho-musica li {
     list-style: none;
