@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@100&family=Inconsolata&family=Lora&family=Poppins&display=swap");
+
+body {
+    background-color: #000000f3;
+    font-family: "Fira Sans", sans-serif;
+    font-family: "Inconsolata", monospace;
+    font-family: "Lora", serif;
+    font-family: "Poppins", sans-serif;
+  }
+  .introducao {
+    padding: 2em;
+    color: white;
+  }
+  #opcao {
+    margin-left: 2em;
+    width: 9em;
+   }
+   .textOpcao {
+    color: white;
+    margin-left: 1.5em;
+   }
+  textarea {
+    margin: 1em;
+    margin-left: 2em;
+    width: 50em;
+    height: 10em;
+    border-radius: 0.2em;
+    word-wrap: break-word; /* Quebra palavras longas */
+  }
+  .submit{
+    height: 2.8em;
+    width: 11em;
+    margin-left: 20em;
+    margin-top: 1em;
+    border-radius: 0.7em;
+  }
+  .text-title-resultado  {
+    margin: 1.3em;
+    color: white;
+  }
+  #resultado {
+    margin: 1em;
+    margin-top: -2em;
+    border-radius: 0.5em;
+    background-color: white;
+    font-size: 1em;
+    border: solid;
+    word-wrap: break-word; /* Quebra palavras longas */
+  }
+  button {
+    height: 1.5em;
+    width: 5em;
+    margin-left: 18em;
+    transform: translateY(-1.8em);
+    border-radius: 0.7em;
+  }
+  @media (max-width: 767px) {
+    #opcao {
+      margin-left: 1.4em;
+      width: 5em;
+     }
+     .textOpcao {
+      color: white;
+      margin-left: 1em;
+     }
+    textarea {
+      margin: 1em;
+      margin-left: 1.5em;
+      width: 26em;
+      height: 10em;
+      border-radius: 0.2em;
+      word-wrap: break-word; /* Quebra palavras longas */
+    }
+    .submit{
+      height: 2.8em;
+      width: 11em;
+      margin-left: 10em;
+      margin-top: 1em;
+      border-radius: 0.7em;
+    }
+    .text-title-resultado  {
+      margin: 1.3em;
+      color: white;
+    }
+    #resultado {
+      margin: 1em;
+      margin-top: -2em;
+      border-radius: 0.5em;
+      background-color: white;
+      font-size: 0.8em;
+      border: solid;
+      word-wrap: break-word; /* Quebra palavras longas */
+    }
+    button {
+      height: 1.5em;
+      width: 5em;
+      margin-left: 18em;
+      transform: translateY(-1.8em);
+      border-radius: 0.7em;
+    }
+  
+  }

@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@100&family=Inconsolata&family=Lora&family=Poppins&display=swap");
+
 header {
   background-color: black;
   font-family: "Fira Sans", sans-serif;
@@ -6,69 +7,71 @@ header {
   font-family: "Lora", serif;
   font-family: "Poppins", sans-serif;
 }
-.cabecalho-musica img {
+.cabecalho-anotacao img {
   width: 3em;
   margin: 0.5em;
   margin-left: 4em;
 }
-.cabecalho-musica a {
+.cabecalho-anotacao a {
   text-decoration: none;
   margin: 1em;
   margin-right: 5em;
   position: relative;
-  color: rgb(166, 247, 202);
+  color: rgb(11, 129, 165);
 }
-.cabecalho-musica a::before {
+.cabecalho-anotacao li {
+  list-style: none;
+  display: inline-block;
+  float: right;
+  margin-top: 1.6em;
+}
+.cabecalho-anotacao a::before {
   content: "";
   position: absolute;
   width: 100%;
   height: 1px; /* Espessura do overline */
   bottom: 0;
   left: 0;
-  background-color: rgb(11, 240, 240); /* Cor do overline */
+  background-color: rgb(13, 91, 180); /* Cor do overline */
   transform: scaleX(0); /* Inicialmente, o overline estará escondido */
   transition: transform 0.3s ease-in-out;
 }
-.cabecalho-musica a:hover::before {
+.cabecalho-anotacao a:hover::before {
   transform: scaleX(1);
-}
-.cabecalho-musica li {
-  list-style: none;
-  display: flex;
-  float: right;
-  margin-top: 0.5em;
 }
 .progress-container {
   height: 0.1em;
   position: relative;
-  background-color: rgb(10, 163, 130);
+  background-color: rgb(14, 52, 175);
 }
 @media (max-width: 767px) {
-  .cabecalho-musica img {
-    width: 2em;
-    margin: 0.4em;
-    margin-left: none;
+  .cabecalho-anotacao a::before {
+    display: none;
   }
-  .cabecalho-musica a {
+  .cabecalho-anotacao a:hover::before {
+    display: none;
+  }
+  .cabecalho-anotacao img {
+    width: 2.5em;
+    margin: 0.5em;
+    margin-left: 1em;
+  }
+  .cabecalho-anotacao a {
     text-decoration: none;
     margin: 0.7em;
     margin-right: 0.1em;
+    position: relative;
+    color: rgb(11, 129, 165);
     cursor: none;
   }
-  .cabecalho-musica li {
+  .cabecalho-anotacao a:active {
+    color: rgb(7, 41, 189);
+  }
+  .cabecalho-anotacao li {
     list-style: none;
-    display: flex;
+    display: inline-block;
     float: right;
-    margin-right: 0.3em;
-    margin-top: 0.2em;
-  }
-  .cabecalho-musica a:active {
-    color: #6b6bff;
-  }
-  .cabecalho-musica a::before {
-    display: none;
-  }
-  .cabecalho-musica a:hover::before {
-    display: none;
+    margin-right: 0.4em;
+    margin-top: 1.4em;
   }
 }

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Assents/Css/reset.css">
+    <link rel="stylesheet" href="./Assents/Css/Subpaginas/cabecalho-anotacao.css">
+    <link rel="stylesheet" href="./Assents/Css/Subpaginas/main-anotacao.css">
+    <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-storage.js"></script>
+    <title>Anotações</title><link rel="icon" href="caminho-para-o-seu-favicon.ico"type="image/x-icon"/>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="cabecalho-anotacao">
+                <img src="./Assents/Image/bloco-de-anotacoes.png">
+                <li><a href="">Lista</a></li>
+                <li><a href="">Eu & Você</a></li>
+                <li><a href="musica.html">Musica</a></li>
+                <li><a href="index.html">Inicio</a></li>
+            </ul>
+            <div class="progress-container">
+        </nav>
+    </header>
+    <main>
+        <section class="introducao">
+            <h1>Nossas Anotações</h1>
+        </section>
+        <h3 class="textOpcao">Quem está falando?</h3>
+        <select id="opcao">
+            <option value="Larissa">Larissa</option>
+            <option value="Brian">Brian</option>
+        </select>
+        <input type="date" id="data" name="data">
+        <input type="time" id="hora" name="hora">
+        <section>
+            <textarea type="text" id="anotacao" placeholder="Em teste" ></textarea><br>
+            <button class="submit" onclick="salvarNoFirebase()">Enviar</button>
+            <h1 class="text-title-resultado">Anotados</h1>
+            <div id="resultado"><br></div>
+        </section>
+        <script src="./Assents/Js/anotacao.js"></script>
+    </main>
+</body>
+</html>

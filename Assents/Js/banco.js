@@ -63,10 +63,10 @@ function enviarParaFirebase() {
           (error) => {
             if (error) {
               console.error(
-                "Erro ao enviar dados para o Firebase: " + error.message
+                "Erro ao enviar dados: " + error.message
               );
             } else {
-              console.log("Dados enviados com sucesso para o Firebase!");
+              console.log("Dados enviados com sucesso!");
             }
           }
         );
