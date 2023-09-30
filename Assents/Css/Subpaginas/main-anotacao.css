@@ -35,10 +35,11 @@ body {
     border-radius: 0.7em;
   }
   .text-title-resultado  {
-    margin: 1.3em;
+    margin: 1.2em;
     color: white;
   }
   #resultado {
+    padding: 0.4em;
     margin: 1em;
     margin-top: -2em;
     border-radius: 0.5em;
@@ -66,7 +67,7 @@ body {
     textarea {
       margin: 1em;
       margin-left: 1.5em;
-      width: 26em;
+      width: 24em;
       height: 10em;
       border-radius: 0.2em;
       word-wrap: break-word; /* Quebra palavras longas */
@@ -74,7 +75,7 @@ body {
     .submit{
       height: 2.8em;
       width: 11em;
-      margin-left: 10em;
+      margin-left: 8.5em;
       margin-top: 1em;
       border-radius: 0.7em;
     }
@@ -95,7 +96,7 @@ body {
       height: 1.5em;
       width: 5em;
       margin-left: 18em;
-      transform: translateY(-1.8em);
+      transform: translateY(-1.2em);
       border-radius: 0.7em;
     }
   

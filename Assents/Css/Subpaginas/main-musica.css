@@ -48,6 +48,15 @@ main {
 .staiway p {
   margin-right: 3.8em;
 }
+.feeling p {
+  margin-right: 8.3em;
+}
+.artic p {
+  margin-right: 2.1em;
+}
+.carti p {
+  margin-right: 3.2em;
+}
 audio {
   position: fixed;
   top: 37em;
@@ -155,6 +164,15 @@ button {
   }
   .staiway p {
     margin-right: 5em;
+  }
+  .feeling p {
+    margin-right: 8.5em;
+  }
+  .artic p {
+    margin-right: 2.1em;
+  }  
+  .carti p {
+    margin-right: 3.6em;
   }
   
   .Formulario {
