@@ -1,107 +1,112 @@
 @import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@100&family=Inconsolata&family=Lora&family=Poppins&display=swap");
 
 body {
-    background-color: #000000f3;
-    font-family: "Fira Sans", sans-serif;
-    font-family: "Inconsolata", monospace;
-    font-family: "Lora", serif;
-    font-family: "Poppins", sans-serif;
-  }
+  background-color: #0d1b68c2;
+  font-family: "Fira Sans", sans-serif;
+  font-family: "Inconsolata", monospace;
+  font-family: "Lora", serif;
+  font-family: "Poppins", sans-serif;
+}
+.introducao {
+  margin: 1em;
+  border-radius: 1em;
+  box-shadow: 0.4em 0.4em 0.4em rgba(45, 38, 136, 0.808);
+  background-color: rgba(45, 38, 136, 0.808);
+  width: 14em;
+  padding: 0.9em;
+  color: rgb(166, 182, 233);
+}
+#opcao {
+  margin-left: 25em;
+  width: 9em;
+}
+.textOpcao {
+  color: rgb(204, 205, 255);
+  margin-left: 17.6em;
+}
+textarea {
+  margin: 1em;
+  margin-left: 25em;
+  width: 50em;
+  height: 10em;
+  border-radius: 0.2em;
+  word-wrap: break-word; /* Quebra palavras longas */
+}
+.submit {
+  height: 2.8em;
+  width: 11em;
+  margin-left: 45em;
+  margin-top: 1em;
+  border-radius: 0.7em;
+}
+.text-title-resultado {
+  margin: 1.2em;
+  color: rgb(204, 205, 255);
+}
+#resultado {
+  margin: 1em;
+  margin-top: -2em;
+  font-size: 1em;
+  word-wrap: break-word; /* Quebra palavras longas */
+}
+#mensagemResultado {
+  margin-left: 42em;
+  transform: translateY(3.4em);
+  color: white;
+}
+button {
+  height: 1.5em;
+  width: 5em;
+  margin-left: 19em;
+  transform: translateY(-2.2em);
+  border-radius: 0.7em;
+}
+@media (max-width: 767px) {
   .introducao {
-    padding: 2em;
-    color: white;
+    padding: 1em;
   }
   #opcao {
-    margin-left: 2em;
-    width: 9em;
-   }
-   .textOpcao {
-    color: white;
-    margin-left: 1.5em;
-   }
+    margin-left: 1.4em;
+    width: 5em;
+  }
+  .textOpcao {
+    margin-left: 1em;
+  }
   textarea {
     margin: 1em;
-    margin-left: 2em;
-    width: 50em;
+    margin-left: 1.5em;
+    width: 24em;
     height: 10em;
     border-radius: 0.2em;
     word-wrap: break-word; /* Quebra palavras longas */
   }
-  .submit{
+  .submit {
     height: 2.8em;
     width: 11em;
-    margin-left: 20em;
+    margin-left: 8.5em;
     margin-top: 1em;
     border-radius: 0.7em;
   }
-  .text-title-resultado  {
-    margin: 1.2em;
-    color: white;
+  .text-title-resultado {
+    margin: 1em;
   }
   #resultado {
     margin: 1em;
     margin-top: -2em;
-    font-size: 1em;
+    font-size: 0.8em;
     word-wrap: break-word; /* Quebra palavras longas */
   }
   #mensagemResultado {
-    margin-left: 25em;
-    transform: translateY(3.1em);
+    margin-left: 1em;
+    transform: none;
     color: white;
   }
+
   button {
     height: 1.5em;
     width: 5em;
-    margin-left: 18em;
-    transform: translateY(-1.3em);
+    margin-left: 15em;
+    transform: translateY(-1.8em);
     border-radius: 0.7em;
   }
-  @media (max-width: 767px) {
-    #opcao {
-      margin-left: 1.4em;
-      width: 5em;
-     }
-     .textOpcao {
-      color: white;
-      margin-left: 1em;
-     }
-    textarea {
-      margin: 1em;
-      margin-left: 1.5em;
-      width: 24em;
-      height: 10em;
-      border-radius: 0.2em;
-      word-wrap: break-word; /* Quebra palavras longas */
-    }
-    .submit{
-      height: 2.8em;
-      width: 11em;
-      margin-left: 8.5em;
-      margin-top: 1em;
-      border-radius: 0.7em;
-    }
-    .text-title-resultado  {
-      margin: 1.3em;
-      color: white;
-    }
-    #resultado {
-      margin: 1em;
-      margin-top: -2em;
-      font-size: 0.8em;
-      word-wrap: break-word; /* Quebra palavras longas */
-    }
-    #mensagemResultado {
-      margin-left: 1em;
-      transform: none;
-      color: white;
-    }
-  
-    button {
-      height: 1.5em;
-      width: 5em;
-      margin-left: 15em;
-      transform: translateY(-0.4em);
-      border-radius: 0.7em;
-    }
-  
-  }
+}

@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@100&family=Inconsolata&family=Lora&family=Poppins&display=swap");
 
 header {
-  background-color: black;
+  background-color: #110641e3;
   font-family: "Fira Sans", sans-serif;
   font-family: "Inconsolata", monospace;
   font-family: "Lora", serif;
@@ -42,7 +42,7 @@ header {
 .progress-container {
   height: 0.1em;
   position: relative;
-  background-color: rgb(14, 52, 175);
+  background-color: rgb(0, 60, 255);
 }
 @media (max-width: 767px) {
   .cabecalho-anotacao a::before {

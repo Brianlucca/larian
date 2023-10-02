@@ -5,7 +5,6 @@ const select = document.getElementById("opcao");
 const btn = document.querySelector("button");
 const div = document.getElementById("resultado");
 
-// Inicialize o Firebase (substitua as configurações pelo seu próprio projeto do Firebase)
 const firebaseConfig = {
   apiKey: "AIzaSyDdAz80uSFEYSVRgOzoV-p7IGMcnIkc7Og",
   authDomain: "musicas-34b84.firebaseapp.com",
@@ -30,7 +29,8 @@ function exibirAnotacoes() {
   bancodedadosLocal.map(({ anotacao, opcao, data, hora }, index) => {
     div.innerHTML += `<div style="border: 1px solid white; margin: 1em; padding: 0.4em; border-radius: 0.3em; background-color: white; width: 25em; display: inline-block; color: black">
                         <h3>${anotacao}</h3>
-                        <p>${opcao}, ${data} ás ${hora}</p>
+                        <hr>
+                        <p style="background-color: rgba(45, 38, 136, 0.808); width: 15em; border-radius: 0.2em; padding: 0.2em; margin: 0.2em;">${opcao}, ${data} ás ${hora}</p>
                         <button onclick="excluirAnotacao(${index})">Excluir</button>
                       </div>`;
   });
@@ -71,7 +71,7 @@ function excluirAnotacao(index) {
   if (confirm("Tem certeza de que deseja excluir esta anotação?")) {
     bancodedadosLocal.splice(index, 1);
     localStorage.setItem("bancodedados", JSON.stringify(bancodedadosLocal));
-    
+
     exibirAnotacoes(); // Atualize a exibição após a exclusão
   }
 }
