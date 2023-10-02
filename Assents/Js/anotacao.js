@@ -28,7 +28,7 @@ function exibirAnotacoes() {
   div.innerHTML = ""; // Limpe o conteúdo para evitar duplicatas
 
   bancodedadosLocal.map(({ anotacao, opcao, data, hora }, index) => {
-    div.innerHTML += `<div style="border: 1px solid white; margin: 1em; padding: 0.4em; border-radius: 0.3em; background-color: white; width: 24em; display: inline-block; color: black">
+    div.innerHTML += `<div style="border: 1px solid white; margin: 1em; padding: 0.4em; border-radius: 0.3em; background-color: white; width: 25em; display: inline-block; color: black">
                         <h3>${anotacao}</h3>
                         <p>${opcao}, ${data} ás ${hora}</p>
                         <button onclick="excluirAnotacao(${index})">Excluir</button>
