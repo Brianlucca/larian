@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@100&family=Inconsolata&family=Lora&family=Poppins&display=swap");
+body {
+    background-color: #adf1f1;
+    font-family: "Fira Sans", sans-serif;
+    font-family: "Inconsolata", monospace;
+    font-family: "Lora", serif;
+    font-family: "Poppins", sans-serif;
+  }
+  .introducao {
+    margin: 3em;
+  }
+  .introducao h3 {
+    margin-left: 4em;
+  }
+  .introducao-lista h3{
+    margin-left: 24.3em;
+  }
+  #nome1{
+    margin: 0.3em;
+    border-radius: 0.1em;
+    margin-left: 34em;
+    width: 30em;
+    height: 2em;
+    padding: 0.1em;
+  }
+  button {
+    height: 2.2em;
+    padding: 0.1em;
+    border-radius: 0.2em;
+  }
+  .buttonResultado {
+    padding: 0.1em;
+    width: 4em;
+    height: 1.6em;
+  }
+  .inputResultado {
+    margin: 0.3em;
+  }
+  #resultado {
+    margin: 1em;
+    display: flex;
+    flex-wrap: wrap; /* Permite que os itens quebrem para uma nova linha se não couberem na largura disponível */
+    gap: 6px; /* Espaço entre os itens */  
+}
+#mensagemResultado {
+    margin-left: 29em;
+}
+@media (max-width: 767px) {
+    .introducao {
+        margin: 1em;
+      }
+      .introducao h3 {
+        margin-left: 2em;
+      }
+      .introducao-lista h3{
+        display: none;
+      }
+      #nome1{
+        margin: 1em;
+        border-radius: 0.1em;
+        margin-left: 2em;
+        width: 20em;
+        height: 2em;
+        padding: 0.1em;
+      }
+      button {
+        height: 2.2em;
+        padding: 0.1em;
+        border-radius: 0.2em;
+      }
+      .buttonResultado {
+        padding: 0.1em;
+        width: 4em;
+        height: 1.6em;
+      }
+      .inputResultado {
+        margin: 0.3em;
+      }
+      #resultado {
+        margin: 2em;
+        display: flex;
+        flex-wrap: wrap; /* Permite que os itens quebrem para uma nova linha se não couberem na largura disponível */
+        gap:15px; /* Espaço entre os itens */  
+    }
+    #mensagemResultado {
+        margin-left: 0.5em;
+    }
+    
+}

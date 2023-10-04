@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Assents/Css/reset.css">
+    <link rel="stylesheet" href="./Assents/Css/Subpaginas/cabecalho-lista.css">
+    <link rel="stylesheet" href="./Assents/Css/Subpaginas/main-lista.css">
+    <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-storage.js"></script>
+    <rel></rel>
+    <title>Listas</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="cabecalho-lista">
+                <img src="./Assents/Image/dependencias.png">
+                <li><a href="eu&voce.html">Eu & Você</a></li>
+                <li><a href="anotacao.html">Anotação</a></li>
+                <li><a href="musica.html">Musicas</a></li>
+                <li><a href="index.html">Inicio</a></li>
+            </ul>
+            <div class="progress-container"></div>
+        </nav>
+    </header>
+    <main>
+        <section class="introducao">
+            <h1>Gerencie suas listas.</h1>
+            <h3>Crie suas listas aqui!</h3>
+        </section class="listas">
+        <div id="mensagemResultado"></div>
+        <section class="introducao-lista">
+            <h3>Crie sua lista</h3>
+            <form class="Formulario" id="Formulario-lista">
+                  <input type="text" id="nome1"placeholder="Digite sua lista" />
+                  <button type="button" onclick="salvarNoFirebase()">Enviar</button>
+                  <div id="resultado"></div>
+              </form>        
+        </section>
+        <script src="./Assents/Js/lista.js"></script>
+    </main>
+</body>
+</html>
