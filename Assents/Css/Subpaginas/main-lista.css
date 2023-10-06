@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@100&family=Inconsolata&family=Lora&family=Poppins&display=swap");
 body {
-  background-color: #adf1f1;
+  background-color: #51b8b8;
   font-family: "Fira Sans", sans-serif;
   font-family: "Inconsolata", monospace;
   font-family: "Lora", serif;
@@ -29,30 +29,26 @@ button {
   border-radius: 0.2em;
 }
 .buttonResultado {
-  font-size: 0.9em;
-  margin: 0.1em;
-  padding: 0.1em;
-  margin-left: 0.5em;
+  font-size: 1em;
   cursor: pointer;
-  background-color: rgba(31, 77, 204, 0.397);
-  width: 3.4em;
-  border-radius: 0.4em;
+  float: right;
+  margin-left: 4em;
+  transform: translateY(-1em);
+  color: rgb(255, 81, 0);
+
 }
 .inputResultado {
-  margin: 0.3em;
-  margin-left: -0.3em;
-  transform: translateY(0.6em);
+  transform: translateY(1.1em);
 }
-#resultado h3 {
+#resultado p {
   margin-left: 1em;
-  margin-top: -1.1em;
+  transform: translateY(-0.7em);
+  font-weight: bold;
 }
 #resultado {
-  color: rgb(47, 47, 48);
-  margin: 3em;
+  margin: 5em;
   display: flex;
   flex-wrap: wrap; /* Permite que os itens quebrem para uma nova linha se não couberem na largura disponível */
-  gap: 2em; /* Espaço entre os itens */
 }
 #mensagemResultado {
   margin-left: 29em;
@@ -69,7 +65,7 @@ button {
     margin-left: 4em;
   }
   .introducao-lista h3 {
-    margin-left: 1.6em;
+    margin-left: 2.1em;
   }
   #nome1 {
     margin: 0.1em;
@@ -86,26 +82,25 @@ button {
     border-radius: 0.2em;
   }
   .buttonResultado {
-    margin-top: 0.6em;
-    transform: translateX(-0.4em);
-    background-color: rgba(31, 77, 204, 0.397);
-    width: 3.3em;
-    border-radius: 0.3em;
-    font-size: 0.7em;
+    margin-top: -1em;
+    float: right;
+    transform: translateY(-1.3em);
+    transform: translateX(0.1em);
+    font-size: 1em;
+    color: rgb(255, 81, 0);
   }
   .inputResultado {
-    margin: 0.1em;
-    transform: translateY( -0.1em);
+    transform: translateY( 0.7em);
   }
-  #resultado h3 {
-    margin-top: -1.6em;
-    padding: 0.1em;
+  #resultado p {
+    margin-left: 1.3em;
+    margin-top: -0.9em;
+    transform: translateY(-0.1em);
   }
   #resultado {
-    margin: 3em;
-    display: flex;
+    margin-left: 2em;
+    display: inline;
     flex-wrap: wrap; /* Permite que os itens quebrem para uma nova linha se não couberem na largura disponível */
-    gap: 1em; /* Espaço entre os itens */
   }
   #mensagemResultado {
     margin-left: 0.5em;

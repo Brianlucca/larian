@@ -27,10 +27,10 @@ const listasLocal =
       const checked = marcado ? 'checked' : '';
       const marcadoClass = marcado ? 'marcado' : '';
   
-      div.innerHTML += `<div style="border-radius: 1em; background-color: #d0f7ef; padding: 1em;">
+      div.innerHTML += `<div style="border-radius: 1em; background-color: #d0f7ef; padding: 1em; margin: 0.8em;">
+                          <p class="buttonResultado"onclick="excluirLista(${index})">X</p>
                           <input class="inputResultado" type="checkbox" ${checked} onclick="marcarCheckbox(${index})">
-                          <h3 class="${marcadoClass}">${nome1}</h3>
-                          <p class="buttonResultado"onclick="excluirLista(${index})">Excluir</p>
+                          <p class="${marcadoClass}">${nome1}</h3>
                         </div>`;
     });
   }
