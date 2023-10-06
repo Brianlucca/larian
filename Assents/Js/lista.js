@@ -17,20 +17,29 @@ const app = firebase.initializeApp(firebaseConfig);
 
 const database = firebase.database();
 
-const bancodedadosLocal =
-  JSON.parse(localStorage.getItem("bancodedados")) || [];
+const listasLocal =
+  JSON.parse(localStorage.getItem("listas")) || [];
 
-function exibirLista() {
-  div.innerHTML = ""; // Limpe o conteúdo para evitar duplicatas
-
-  bancodedadosLocal.map(({nome1}, index) => {
-    div.innerHTML += `<div>
-                        <input class="inputResultado" type="checkbox">${nome1}</h3>
-                        <button class="buttonResultado" onclick="excluirLista(${index})">Apagar</button>
-                      </div>`;
-  });
-}
-
+  function exibirLista() {
+    div.innerHTML = ""; // Limpe o conteúdo para evitar duplicatas
+  
+    listasLocal.forEach(({ nome1, marcado }, index) => {
+      const checked = marcado ? 'checked' : '';
+      const marcadoClass = marcado ? 'marcado' : '';
+  
+      div.innerHTML += `<div style="border-radius: 1em; background-color: #d0f7ef; padding: 1em;">
+                          <input class="inputResultado" type="checkbox" ${checked} onclick="marcarCheckbox(${index})">
+                          <h3 class="${marcadoClass}">${nome1}</h3>
+                          <p class="buttonResultado"onclick="excluirLista(${index})">Excluir</p>
+                        </div>`;
+    });
+  }
+  function marcarCheckbox(index) {
+    listasLocal[index].marcado = ! listasLocal[index].marcado;
+    localStorage.setItem("listas", JSON.stringify(listasLocal));
+    exibirLista(); // Atualize a exibição após a marcação
+  }
+  
 exibirLista(); // Chame a função para exibir as anotações iniciais
 
 btn.addEventListener("click", () => {
@@ -40,12 +49,12 @@ btn.addEventListener("click", () => {
     nome1,
   };
 
-  bancodedadosLocal.push(novaLista);
+  listasLocal.push(novaLista);
 
   // Envie os dados para o Firebase
   salvarNoFirebase(novaLista);
 
-  localStorage.setItem("bancodedados", JSON.stringify(bancodedadosLocal));
+  localStorage.setItem("listas", JSON.stringify(listasLocal));
   const mensagemDiv = document.getElementById("mensagemResultado");
   mensagemDiv.textContent =
     "Sua lista foi salva. Por favor, atualize a página.";
@@ -58,8 +67,8 @@ function salvarNoFirebase(novaLista) {
 
 function excluirLista(index) {
   if (confirm("Tem certeza de que deseja excluir esta lista?")) {
-    bancodedadosLocal.splice(index, 1);
-    localStorage.setItem("bancodedados", JSON.stringify(bancodedadosLocal));
+    listasLocal.splice(index, 1);
+    localStorage.setItem("listas", JSON.stringify(listasLocal));
 
     exibirLista(); // Atualize a exibição após a exclusão
   }
