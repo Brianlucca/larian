@@ -1,9 +1,67 @@
-@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@100&family=Inconsolata&family=Lora&family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+Display:ital,wght@0,300;1,200;1,300;1,400&display=swap");
 
-main {
-  font-family: "Fira Sans", sans-serif;
-  font-family: "Inconsolata", monospace;
-  font-family: "Lora", serif;
-  font-family: "Poppins", sans-serif;
-  background: linear-gradient(to bottom ,#6b6bff , #ff6ec5cc);
+body {
+  font-family: "Noto Serif Display", serif;
+  background: linear-gradient(to right, #7bed9f 55%, rgb(208, 255, 253));
+}
+
+.imagemIndex {
+  width: 45em;
+  height: 38em;
+}
+.textoIndex h1 {
+  margin-left: 26.2em;
+  margin-top: -15em;
+  font-size: 2em;
+}
+.textoIndex h3 {
+  margin-left: 35em;
+  margin-top: 3em;
+  text-align: center;
+}
+
+@media (max-width: 767px) {
+  body {
+    font-family: "Noto Serif Display", serif;
+    background: #7bed9f;
+  }
+  .imagemIndex {
+    width: 20em;
+    height: 15em;
+    margin-left: 1.8em;
+    margin-top: 10em;
+  }
+  .textoIndex h1 {
+    text-align: center;
+    margin-left: 0.1em;
+    transform: translateY(3em);
+    font-size: 1.5em;
+  }
+  .textoIndex h3 {
+    margin-left: 0.1em;
+    margin-top: 20em;
+    font-size: 1em;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 360px) and (max-height: 800px) {
+  .imagemIndex {
+    width: 20em;
+    height: 15em;
+    margin-left: 1.6em;
+    margin-top: 10em;
+  }
+  .textoIndex h1 {
+    text-align: center;
+    margin-left: 0.4em;
+    transform: translateY(3em);
+    font-size: 1.5em;
+  }
+  .textoIndex h3 {
+    margin-left: 0.1em;
+    margin-top: 20em;
+    font-size: 1em;
+    text-align: center;
+  }
 }

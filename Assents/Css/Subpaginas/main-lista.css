@@ -90,12 +90,12 @@ button {
     color: rgb(255, 81, 0);
   }
   .inputResultado {
-    transform: translateY( 0.7em);
+    transform: translateY( 0.5em);
   }
   #resultado p {
     margin-left: 1.3em;
     margin-top: -0.9em;
-    transform: translateY(-0.1em);
+    transform: translateY(-0.3em);
   }
   #resultado {
     margin-left: 2em;

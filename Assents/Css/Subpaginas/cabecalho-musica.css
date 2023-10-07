@@ -62,15 +62,15 @@ header {
     cursor: none;
     color: rgb(166, 247, 202);
   }
+  .cabecalho-musica a:active {
+    color: #6b6bff;
+  }
   .cabecalho-musica li {
     list-style: none;
     display: flex;
     float: right;
     margin-right: 0.3em;
     margin-top: 0.2em;
-  }
-  .cabecalho-musica a:active {
-    color: #6b6bff;
   }
   .cabecalho-musica a::before {
     display: none;

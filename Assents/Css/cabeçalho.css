@@ -1,11 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@100&family=Inconsolata&family=Lora&family=Poppins&display=swap");
 
 header {
-  background: linear-gradient(to bottom, #ff6ec5cc, #6b6bff);
+  background: #7BED9F;
   font-family: "Fira Sans", sans-serif;
   font-family: "Inconsolata", monospace;
   font-family: "Lora", serif;
   font-family: "Poppins", sans-serif;
+  background: linear-gradient(to right, #7BED9F 55%, rgb(208, 255, 253) );
 }
 
 .opcoes-cabecalho img {
@@ -14,6 +15,7 @@ header {
   margin-left: 4em;
 }
 .opcoes-cabecalho a {
+  color: rgb(4, 41, 20);
   text-decoration: none;
   margin: 1em;
   margin-right: 5em;
@@ -26,12 +28,11 @@ header {
   height: 1px; /* Espessura do overline */
   bottom: 0;
   left: 0;
-  background-color: rgb(114, 27, 88); /* Cor do overline */
+  background-color: rgb(4, 41, 20); /* Cor do overline */
   transform: scaleX(0); /* Inicialmente, o overline estará escondido */
   transition: transform 0.3s ease-in-out;
 }
 .opcoes-cabecalho a:hover::before {
-  color: rgb(114, 27, 88);
   transform: scaleX(1);
 }
 .opcoes-cabecalho li {
@@ -41,6 +42,9 @@ header {
 }
 
 @media (max-width: 767px) {
+  header {
+    background: #7BED9F;
+  }
   .opcoes-cabecalho img {
     width: 2em;
     margin-left: 0.3em;
