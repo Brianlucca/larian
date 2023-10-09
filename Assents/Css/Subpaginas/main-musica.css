@@ -57,6 +57,7 @@ body {
 .carti p {
   margin-right: 3.2em;
 }
+
 audio {
   position: fixed;
   top: 37em;
@@ -114,8 +115,10 @@ button {
   }
   .musicas li {
     list-style: none;
-    margin: 1.2em;
-    margin-left: 2em;
+    display: inline-block;
+    width: 20em;
+    margin: 0.4em;
+    margin-left: 1.3em;
     border-radius: 1em;
     background-color: rgba(110, 101, 101, 0.116);
   }
@@ -143,7 +146,7 @@ button {
     position: static;
     margin-top: 0.1em;
     right: 5em;
-    width: 19.2em;
+    width: 20em;
     background-color: rgb(71, 109, 71);
     padding: 0.5em 0.5em;
     border-top-right-radius: none;
@@ -151,28 +154,6 @@ button {
     border-bottom-right-radius: 1em;
     border-bottom-left-radius: 1em;
     display: none;
-  }
-
-  .firsTime p {
-    margin-right: 1.2em;
-  }
-  .timeToDie p {
-    margin-right: 0.9em;
-  }
-  .RBD p {
-    margin-right: 7.6em;
-  } 
-  .staiway p {
-    margin-right: 5em;
-  }
-  .feeling p {
-    margin-right: 8.5em;
-  }
-  .artic p {
-    margin-right: 2em;
-  }  
-  .carti p {
-    margin-right: 3.5em;
   }
   
   .Formulario {

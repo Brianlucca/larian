@@ -9,7 +9,7 @@ let musicaAtual = null;
 
 // Função para atualizar a mensagem
 function atualizarMensagem(musicaNome) {
-    mensagemMusica.textContent = `Tocando agora - ${musicaNome}`;
+    mensagemMusica.textContent = `Tocando agora: ${musicaNome}`;
     mensagemMusica.style.display = 'block';
 }
 
